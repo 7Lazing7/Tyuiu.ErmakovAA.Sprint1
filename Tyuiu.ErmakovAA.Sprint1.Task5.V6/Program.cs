@@ -24,13 +24,14 @@ namespace Tyuiu.ErmakovAA.Sprint1.Task5.V6
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                            *");
             Console.WriteLine("*******************************************************************************");
             Console.WriteLine("Введите исходные данные:");
-            Console.WriteLine("Введите исходные число k)");
+            Console.WriteLine("Введите исходные число k (от 1 до 365)");
             int k;
             k = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("******************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                                 *");
             Console.WriteLine("******************************************************************************");
+            
             Console.WriteLine(ds.Calculate(k));
             Console.ReadLine();
         }

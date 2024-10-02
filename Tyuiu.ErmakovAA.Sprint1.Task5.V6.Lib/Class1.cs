@@ -5,7 +5,7 @@ namespace Tyuiu.ErmakovAA.Sprint1.Task5.V6.Lib
     {
         public int Calculate(int k)
         {
-           return Convert.ToInt32(k / 365);
+            return Convert.ToInt32(k % 7);
         }
     }
 
