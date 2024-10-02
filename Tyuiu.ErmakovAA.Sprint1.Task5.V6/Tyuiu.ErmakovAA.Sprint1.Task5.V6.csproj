@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tyuiu.ErmakovAA.Sprint1.Task5.V6.Lib\Tyuiu.ErmakovAA.Sprint1.Task5.V6.Lib.csproj" />
+  </ItemGroup>
+
+</Project>
