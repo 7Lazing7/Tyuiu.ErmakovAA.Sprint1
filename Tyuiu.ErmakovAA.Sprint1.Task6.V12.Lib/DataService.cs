@@ -6,26 +6,44 @@ namespace Tyuiu.ErmakovAA.Sprint1.Task6.V12.Lib
     {
         public bool CheckLastWordRepetiton(string value)
         {
-            string[] words = input.Split(' ');
-            string lastWord = words[words.Length - 1];
-
-            bool appearsAgain = words.Take(words.Length - 1).Any(w => w.Equals(lastWord, StringComparison.OrdinalIgnoreCase));
-
-            if (appearsAgain)
+            if (string.IsNullOrWhiteSpace(value))
             {
-                Console.WriteLine($"Последнее слово \"{lastWord}\" входит в строку еще раз.");
-            }
-            else
-            {
-                Console.WriteLine($"Последнее слово \"{lastWord}\" не входит в строку еще раз.");
+                return false;
             }
 
+            // Убираем лишние пробелы в начале и конце строки
+            value = value.Trim();
+
+            // Разбиваем текст на слова
+            var words = value.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+            // Если слов нет, возвращаем false
+            if (words.Length == 0)
+            {
+                return false;
+            }
+
+            // Получаем последнее слово
+            string lastWord = words[^1]; // Используем индексацию с конца
+
+            // Проверяем, встречается ли последнее слово в строке еще раз
+            int lastWordCount = 0;
+            foreach (var word in words)
+            {
+                if (word.Equals(lastWord, StringComparison.OrdinalIgnoreCase))
+                {
+                    lastWordCount++;
+                }
+            }
+
+            // Если найдено больше одного вхождения, возвращаем true
+            return lastWordCount > 1;
         }
     }
 }
 
-   
-     
 
-           
+
+
+
 
