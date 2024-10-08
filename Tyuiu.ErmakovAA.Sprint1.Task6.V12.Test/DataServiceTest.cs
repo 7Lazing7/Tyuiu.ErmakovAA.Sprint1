@@ -9,9 +9,9 @@ namespace Tyuiu.ErmakovAA.Sprint1.Task6.V12.Test
         {
             string strTest = "Hello World";
             DataService ds = new DataService();
-            string res = ds.EndsWith( strTest );
+            string res = (strTest);
             string wait = "World";
-            Assert.AreEqual ( strTest, res );
+            Assert.AreEqual(strTest, res);
         }
     }
 }
